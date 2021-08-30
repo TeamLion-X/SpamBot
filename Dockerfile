@@ -3,9 +3,10 @@ FROM python:3.8.5-slim-buster
 
 WORKDIR /root/spambot
 
+RUN chmod 777 /root/spambot
 
-RUN apt-get update
-RUN apt install upgrade -y 
+RUN sudo apt-get update
+RUN sudo apt install upgrade -y 
 
 RUN pip3 install --upgrade pip setuptools
 
