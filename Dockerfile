@@ -5,10 +5,10 @@ ENV PIP_NO_CACHE_DIR 1
 
 WORKDIR /root/spambot
 
-RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
 # Installing Required Packages
-RUN apt update && apt upgrade -y && \
+RUN apt-get update
+RUN apt install upgrade -y && \
     apt install --no-install-recommends -y \
     bash \
     curl \
